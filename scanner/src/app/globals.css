@@ -1,0 +1,560 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+
+
+.background {
+  background: linear-gradient(
+    to bottom,
+    #5a4547,
+    #a6a6a7
+  );
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+.container {
+  height: 90%;
+  border: 1px solid rgb(0, 0, 0); 
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  background-color: #ffffff; 
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+
+  
+
+.title {
+  margin-top: -10px; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.message {
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  top: 80x;
+  margin-bottom: 20px;
+}
+
+
+
+
+/*!!!!!!!!!!!!!button   main!!!!!!!!!!!!!!!!!*/
+.button-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: calc(100% - 350px); 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  
+}
+
+.button-container-abandonner {
+  position: fixed;
+  bottom: 10px;
+  left: 220px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: calc(100% - 350px); 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  
+}
+
+.button-container-abandonner button {
+  width: 150px;
+  height: 80px;
+  font-size: 1rem;
+  border: 1px solid #EFF3F6;
+  border-radius: 10px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.button-container button {
+  width: 150px;
+  height: 80px;
+  font-size: 1rem;
+  border: 1px solid #EFF3F6;
+  border-radius: 10px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.buttonPay {
+  width: 200px;
+  height: 80px;
+  background: #000; 
+  border: none;
+  position: fixed; /* Ensure the button stays in a fixed location */
+  bottom: 10px; /* Align it to the bottom */
+  right: 20px; /* Align it from the right side */
+  z-index: 1000; /* Bring it above other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end)));
+  left: 600px;
+}
+
+
+@media (max-width: 900px) {
+  .button-container {
+    bottom: 10px;
+    left: 20px;
+    max-width: calc(100% - 410px);
+  }
+  .button-container button {
+    height: 60px; 
+  }
+
+  .button-container-abandonner {
+    bottom:10px;
+    left: 170px;
+    max-width: calc(100% - 410px);
+    height: 60px; 
+  }
+
+ 
+  .button-container-abandonner button{
+    height: 60px; 
+  }
+
+  .button-Pay-container {
+    right: 200px;
+    bottom: 10px;
+    max-width: calc(100% - 410px);
+  }
+  .buttonPay {
+    width: 150px;
+    height: 60px;
+    bottom: 15px;
+    right: 10px;}
+
+}
+
+
+
+/*µ*/
+.scanner-button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+.retour-button {
+ 
+  padding: 10px 30px;
+  font-size: 1rem;
+  position: relative;
+  top: 200px;
+  left: -200px;
+}
+
+.promotion-button{
+
+  padding: 10px 20px;
+  font-size: 1rem;
+  position: relative;
+  justify-content: center;
+  top: 0px;
+  left: 430px;
+  gap: 20px;
+}
+.button1-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.btn-big {
+  font-size: 24px; 
+  padding: 20px 40px;
+  min-width: 150px;
+}
+
+.button-container-non-oui {
+  position: fixed;
+  top: 200px;
+  left: 450px;
+  height: auto;
+  padding: 20px;
+  gap: 8px;
+}
+
+
+/*Recherch*/
+
+.input {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  padding: 0px;
+  width: 60%;
+  max-width: 400px;
+  margin-bottom: -100px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 2cap;
+  background-color: #fff;
+}
+
+.keyboard-container {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 900px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+  gap: 2px;
+}
+
+.key {
+  font-size: 1em;
+  padding: 2px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+}
+
+.key:active {
+  background-color: #2d2727;
+}
+
+.spaceKey {
+  grid-column: span 5; 
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 200px; 
+}
+
+.bottomButtons .key {
+  flex: 1;
+  font-size: 1em;
+}
+
+
+
+
+
+/* saisir num tel*/
+.keyboard1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 8px;
+  width: 150%; 
+  max-width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 2em;
+}
+.termin-button {
+  position: fixed;
+  transform: translateX(-50%);
+  bottom: 6px;
+  right: -30px;
+  background-color: #414141; 
+  color: #fff; 
+  font-size: 0.5rem;
+  padding: 0px 0px; 
+  cursor: pointer;
+}
+
+
+
+/*PANIER*/
+.panier-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #a5c9ec;
+}
+.panier-container h2{
+text-align: center;
+}
+
+.panier-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  gap: px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #000000;
+}
+
+.panier-list {
+
+  margin-top: 10px;
+}
+
+
+.panier-item {
+  display: grid;
+  grid-template-columns: auto 100px 1fr auto;
+  gap: px;
+  padding: 2px 0;
+  border-bottom: 1px solid #ffffff;
+  align-items: center;
+}
+.panier-item img {
+  max-width: 90px; 
+  height: auto;
+  object-fit: contain;
+}
+.panier-item .quantity,
+.panier-item .price,
+.panier-item .title {
+  text-align: center; 
+}
+.panier-item button {
+  width: 30px; 
+
+}
+.panier-item div {
+  text-align: center;
+}
+
+.panier-item .btn-danger {
+  padding: 3px 3px;
+  font-size: 14px;
+}
+.panier-list-wrapper {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+/*Panier Total*/
+
+.panier-container-total{
+  width: 100%;
+  max-width: 300px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #a5c9ec;
+  height: 60px;
+}
+.panier-total {
+  margin-top: 0px;
+  font-weight:bold;
+}
+@media (max-width: 900px) {
+
+.panier-container-total{
+  right: 20px;
+  
+}
+
+.panier-total {
+  width: 280px; 
+  height: 70px; 
+}
+}
+.panier-item .btn {
+  position: relative;
+  right: 60px;
+  bottom:25px;
+
+}
+
+
+
+.List {
+  margin-top: 30px;
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.List h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.List-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+
+
+
+
+
+/*producttttttttttttttttttttttttLLLLLLissst*/
+
+.product-list {
+  gap: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  white-space: normal; 
+  height: 100%; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.product-item {
+  background-color: #ffffff;
+  border: 1px solid #ece6e6;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100px; 
+  padding: 10px;
+  text-align: center;
+  display: inline-block ; 
+  height: 150px;
+  box-sizing: border-box;
+}
+
+
+.product-item h1 {
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+.product-item p {
+  font-size: 0.9em;
+  margin: 1px 0;
+  color: #3f3e3e;
+}
+
+
+.product-item p:nth-child(3) {
+  font-weight: bold;
+  color: #000;
+}
+
+.product-list-wrapper {
+  position: absolute;
+  bottom: 160px;
+  max-height: 250px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+
+}
+
+.product-item img {
+  height: auto;
+  border-radius: 8px;
+  margin-top: 7px;
+  margin: 0 auto;
+}
+
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.quantity-controls h1 {
+  width: 30px;
+  text-align: center;
+  padding: 5px;
+}
+
+.btn-increment .btn-decrement{
+  color: white;
+  cursor: pointer;
+}
+.btn-decrement {
+  background-color: red;
+}
+
+.btn-increment {
+  background-color: green;
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
